@@ -22,6 +22,7 @@ EARLY_EXAGGERATION = 20.0
 LEARNING_RAGE = 100
 METRIC = 'euclidean'
 #METRIC = 'mahalanobis'
+N_ITER=4000
 
 ########
 # LOAD #
@@ -39,7 +40,7 @@ cpsFlat = [cp.flatten() for cp in cps]
 ###########
 
 # Creating the TSNE object
-tsne = sklearn.manifold.TSNE(n_components=COMPONENTS, early_exaggeration=EARLY_EXAGGERATION, perplexity=PERPLEXITY, metric=METRIC)
+tsne = sklearn.manifold.TSNE(n_components=COMPONENTS, early_exaggeration=EARLY_EXAGGERATION, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER)
 embedding = tsne.fit_transform(cpsFlat)
 
 #plt.scatter(embedding)
@@ -47,16 +48,16 @@ plt.scatter(embedding[:,0], embedding[:,1])
 plt.show()
 
 # Try in 3D
-'''
+
 from mpl_toolkits.mplot3d import Axes3D
 
-tsne = sklearn.manifold.TSNE(n_components=3, perplexity=PERPLEXITY, metric=METRIC)
+tsne = sklearn.manifold.TSNE(n_components=3, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER)
 embedding = tsne.fit_transform(cpsFlat)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(embedding[:,0], embedding[:,1], embedding[:,2])
 plt.show()
-'''
+
 
 

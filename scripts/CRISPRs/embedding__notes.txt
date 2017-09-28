@@ -1,0 +1,4 @@
+33 --- colors looked like rainbow for 33 (probably clustering on size, so that's no good)
+51 --- looked OK
+67 --- looked OK
+101 --- looked not so OK

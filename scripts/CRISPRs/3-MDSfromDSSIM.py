@@ -52,14 +52,15 @@ def assignColours(seq):
 # PARAMETERS #
 ##############
 
-IMAGE_SIZE = 33
-MIN_SIZE = 1000
+IMAGE_SIZE = 67
+MIN_SIZE = 2000
 
 DO_EVERY = 1
 
 COMPONENTS = 2
 N_JOBS = -1		# a way to make the comp use all processors apparently (sweet!)
 METRIC = True	# not sure what this one will do: "If True, perform metric MDS; otherwise, perform nonmetric MDS." <- From http://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html
+#METRIC = False
 N_INIT = 4
 MAX_ITER = 300
 DISSIMILARITY = 'precomputed'	# we need to set this to precomputed because we're using a DSSIM nxn dissimilarity matrix. If we don't change it, it will try to compute it with euclidean (bad)

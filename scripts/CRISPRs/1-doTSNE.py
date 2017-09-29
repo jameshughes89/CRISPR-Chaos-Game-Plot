@@ -7,11 +7,12 @@ NOTES:
 - Lila used Structural Similarity Index (or, dissimiliarity) --- DSSIM (available in skimage)
 - Lila also used Multi-Dimensional Scaling (MDS) for mapping to a space. (available in sklean manifold)
 
-IMAGE_SIZE:
-	33 --- colors looked like rainbow for 33 (probably clustering on size, so that's no good)
-	51 --- looked OK
-	67 --- looked OK
-	101 --- looked not so OK
+MIN 1000
+	IMAGE_SIZE:
+		33 --- colors looked like rainbow for 33 (probably clustering on size, so that's no good)
+		51 --- looked OK
+		67 --- looked OK
+		101 --- looked not so OK
 
 
 '''
@@ -90,7 +91,7 @@ cpsFlat = [cp.flatten() for cp in cps[::DO_EVERY]]
 
 # Creating the TSNE object
 print 'Doing TSNE (This Will Take A While)'
-tsne = sklearn.manifold.TSNE(n_components=COMPONENTS, early_exaggeration=EARLY_EXAGGERATION, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER)
+tsne = sklearn.manifold.TSNE(n_components=COMPONENTS, early_exaggeration=EARLY_EXAGGERATION, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER, learning_rate=LEARNING_RATE)
 embedding = tsne.fit_transform(cpsFlat)
 
 #plt.scatter(embedding)
@@ -111,7 +112,7 @@ np.savetxt('1-TSNE-embedding_' + str(IMAGE_SIZE) + '_' + str(MIN_SIZE) + '.csv',
 from mpl_toolkits.mplot3d import Axes3D
 
 print 'Doing TSNE in 3D (This Will Also Take A While)'
-tsne = sklearn.manifold.TSNE(n_components=3, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER)
+tsne = sklearn.manifold.TSNE(n_components=3, perplexity=PERPLEXITY, metric=METRIC, n_iter=N_ITER, learning_rate=LEARNING_RATE)
 embedding = tsne.fit_transform(cpsFlat)
 
 print 'Plotting 3D Embedding'

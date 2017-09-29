@@ -22,7 +22,7 @@ David
 '''
 
 
-MIN_SIZE = 1000								# Minimum size of a CRISPR before we take it
+MIN_SIZE = 4000								# Minimum size of a CRISPR before we take it
 iFile = open('completeCRISPRs.txt','r')
 oFile = open('CRISPR_' + str(MIN_SIZE) + '.csv','w')
 labelFile = open('CRISPR_labels_' + str(MIN_SIZE) + '.csv','w')	# File for the labels. No idea if this will be handy, but why not save it?

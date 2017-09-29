@@ -8,6 +8,8 @@ DDSIM(x,y) = (1 - SSIM(x,y))/2
 Lila's process used DSSIM instead of TSNE. So let's see what happens. 
 
 
+http://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_ssim
+
 '''
 
 import csv
@@ -43,8 +45,8 @@ def DSSIM(x, y):
 # PARAMETERS #
 ##############
 
-IMAGE_SIZE = 33
-MIN_SIZE = 1000
+IMAGE_SIZE = 255
+MIN_SIZE = 4000
 DO_EVERY = 1
 
 ########

@@ -78,10 +78,10 @@ def findMiddlePoint(p1,p2):
 
 
 # Make an odd number so we can start in centre.
-IMAGE_SIZE = 67
+IMAGE_SIZE = (2**8)-1
 
 # How many genes are in the sequence
-MIN_SIZE = 1000
+MIN_SIZE = 4000
 
 # Which corner will each gene will be
 # WARNING WARNING WARNING
@@ -108,6 +108,7 @@ CORNERS = {
 
 # Load in the data as a numpy array and flatten it. Flattening  
 # is needed because otherwise we get a list of lists of size 1
+print 'Loading Data'
 data = np.array(list(csv.reader(open('../../data/preprocess/CRISPR_' + str(MIN_SIZE) + '.csv','r')))).flatten()
 
 
@@ -125,6 +126,7 @@ oFile = open('/home/james/Desktop/CRISPR_PKL/seqLengths_' + str(MIN_SIZE) + '.cs
 # list of chaos plots
 cps = []
 
+print 'Making Plots (This Will Take A While)'
 # For each sequence in our data file, make the chaos plot
 for seq in data:
 	cp = chaosGamePlot(seq)
@@ -135,7 +137,9 @@ for seq in data:
 	#plt.matshow(cp, cmap = 'binary')
 	#plt.show()
 
+
 # Save the output
+print 'Saveing Plots'
 # WARNING:
 #		When the images were 11x11, the pkl was 12.6MB... 
 #		In other words, if I make it bigger, I may have a problem!

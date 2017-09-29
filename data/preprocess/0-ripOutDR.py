@@ -1,4 +1,5 @@
 '''
+Author: James Alexander Hughes
 
 Single purpose script to rip out the DRs from the copy paste of the CRISPR utility:
 

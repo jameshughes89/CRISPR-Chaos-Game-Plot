@@ -1,4 +1,5 @@
 '''
+Author: James Alexander Hughes
 
 Loads the data and produces the chaos game plots for each CRISPR.
 

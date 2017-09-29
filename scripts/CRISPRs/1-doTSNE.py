@@ -1,10 +1,17 @@
 '''
+Author: James Alexander Hughes
 
 Loads up the already created chaos plots and performs TSNE.
 
 NOTES:
 - Lila used Structural Similarity Index (or, dissimiliarity) --- DSSIM (available in skimage)
 - Lila also used Multi-Dimensional Scaling (MDS) for mapping to a space. (available in sklean manifold)
+
+IMAGE_SIZE:
+	33 --- colors looked like rainbow for 33 (probably clustering on size, so that's no good)
+	51 --- looked OK
+	67 --- looked OK
+	101 --- looked not so OK
 
 
 '''

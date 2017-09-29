@@ -1,4 +1,5 @@
 '''
+Author: James Alexander Hughes
 
 Loads up the already created chaos plots and calculated the Structural Dissimilarity Index (DSSIM)
 
@@ -22,9 +23,9 @@ def DSSIM(x, y):
 	'''
 	Calculates the Structural Dissimilarity Index (DSSIM) between two images (numpy array)
 
-	WARNING
-		THIS SCRIPT WORKS BY RESHAPING THE IMAGES TO WHATEVER *IMAGE_SIZE* IS SET TO
-		THIS WAS A HACK TO MAKE pdist WORK. 
+	****WARNING:
+	********THIS SCRIPT WORKS BY RESHAPING THE IMAGES TO WHATEVER *IMAGE_SIZE* IS SET TO
+	********THIS WAS A HACK TO MAKE pdist WORK. 
 
 	:param x: Image 1 (numpy array)
 	:param y: Image 2 (numpy array)

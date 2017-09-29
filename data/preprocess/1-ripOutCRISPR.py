@@ -1,4 +1,5 @@
 '''
+Author: James Alexander Hughes
 
 Single purpose script to pull the CRISPRs out of the file that I got from the Parisians. 
 Their file had some formatting that I didn't want, so I'm just gonna strip out what I want. 

@@ -96,7 +96,7 @@ plt.show()
 # SAVE #
 ########
 
-np.savetxt('embedding_' + str(IMAGE_SIZE) + '_' + str(MIN_SIZE) + 'csv',embedding)
+np.savetxt('1-TSNE-embedding_' + str(IMAGE_SIZE) + '_' + str(MIN_SIZE) + '.csv',embedding)
 
 '''
 # Try in 3D

@@ -92,7 +92,10 @@ plt.scatter(embedding[:,0], embedding[:,1], color=colours)
 plt.show()
 
 
-# Save the embedding
+########
+# SAVE #
+########
+
 np.savetxt('embedding_' + str(IMAGE_SIZE) + '_' + str(MIN_SIZE) + 'csv',embedding)
 
 '''
